@@ -3,7 +3,7 @@
 
 
 import React from "react";
- 
+import { BsCartPlus } from 'react-icons/bs';
 
 function Kartica({knjiga}) {
 
@@ -20,7 +20,7 @@ function Kartica({knjiga}) {
       </div>
       <div className="product-price-btn">
         <p><span>{knjiga.price}</span>din</p>
-        <button type="button">Dodaj u korpu</button>
+        <button type="button"><BsCartPlus></BsCartPlus></button>
       </div>
     </div>
   </div>

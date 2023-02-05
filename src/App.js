@@ -5,6 +5,7 @@ import NavBar from './komponente/Navbar';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from 'react';
 import Pocetna from './komponente/Pocetna';
+import Korpa from './komponente/Korpa';
 
 function App() {
   const [knjige] = useState([
@@ -57,7 +58,12 @@ function App() {
     <BrowserRouter className="App">
       <NavBar ></NavBar>
       <Routes>
-        <Route  path="/"  element={<Pocetna knjige={knjige} />} />  </Routes>
+        <Route  path="/"  element={<Pocetna knjige={knjige} />} />  
+        <Route  path="/korpa"  element={<Korpa knjige={knjige} />} />  
+        
+        
+        </Routes>
+
       
   </BrowserRouter>
   );
