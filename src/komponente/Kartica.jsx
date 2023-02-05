@@ -5,8 +5,7 @@
 import React from "react";
 import { BsCartPlus } from 'react-icons/bs';
 
-function Kartica({knjiga}) {
-
+function Kartica({knjiga,onAdd}) {
   return (
     <div className="wrapper">
     <div className="product-img">
@@ -20,7 +19,7 @@ function Kartica({knjiga}) {
       </div>
       <div className="product-price-btn">
         <p><span>{knjiga.price}</span>din</p>
-        <button type="button"><BsCartPlus></BsCartPlus></button>
+        <button type="button" onClick={() => onAdd( knjiga.id)}><BsCartPlus></BsCartPlus></button>
       </div>
     </div>
   </div>
