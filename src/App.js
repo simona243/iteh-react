@@ -51,14 +51,23 @@ function App() {
       cart: 0
     },
   ])
-
+  
+  function addProduct( id) {
+    
  
+    knjige.forEach((p) => {
+      if (p.id === id) {
+        p.cart++;
+      }
+    });
+    
+  }
 
   return (
     <BrowserRouter className="App">
       <NavBar ></NavBar>
       <Routes>
-        <Route  path="/"  element={<Pocetna knjige={knjige} />} />  
+        <Route  path="/"  element={<Pocetna onAdd={addProduct}  knjige={knjige} />} />  
         <Route  path="/korpa"  element={<Korpa knjige={knjige} />} />  
         
         

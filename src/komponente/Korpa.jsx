@@ -32,7 +32,7 @@ function Korpa({knjige}) {
           }
            
         ],
-        rows:  knjige.map(k=>{
+        rows:  knjige.filter((k)=>k.cart>0).map(k=>{
             return{
                 name: k.name,
                 autor: k.autor,
